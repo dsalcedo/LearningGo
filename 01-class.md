@@ -111,7 +111,7 @@ __Output__
 
 > Program exited.
 
-# Var Types personalizados
+# Var Types personalizados & avanzados
 
 ```Go
 package main
@@ -123,14 +123,25 @@ import (
 // Custom types
 type dinero int
 
+type point struct {
+    x, y int
+}
+
+
 func main() {
 	var d dinero
 	d = 1500.00
 	fmt.Printf("Hola! Tienes $%v MXN\n", d)
 	fmt.Printf("%T", d)
+	
+	p := point{100, 5}
+	fmt.Println(p, p.x, p.y)
 }
 ```
 __Output__
+```log
 > Hola! Tienes $1500 MXN
-
 > main.dinero
+> {1 2} 1 2
+```
+
