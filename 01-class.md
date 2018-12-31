@@ -43,9 +43,48 @@ func main () {
   var l, m, n = "This content", 3, "mixed types values"
   o, p := 7, 8
   q, r, s, t, u := 9, 10, "SS", "TT", 11
-
+  
+  var v [2]string
+	v[0] = "Hello"
+	v[1] = "World"
+	
+	fmt.Println(a[0], a[1])
+	fmt.Println(a)
 }
 ```
+
+# Array Variables
+
+```Go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var a [4]int
+	fmt.Println(a)
+
+	b := [5]int{1, 2, 3, 4, 5}
+	fmt.Println("dcl:", b)
+	
+	a[2] = 100 // index in position 2
+	fmt.Println(a)
+}
+```
+
+__Output__
+
+```log
+[0 0 0 0]
+
+dcl: [1 2 3 4 5]
+
+[0 0 100 0]
+```
+
+
 
 # Imprimiendo variables
 
